@@ -1,0 +1,22 @@
+<div >
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Candidate Name</th>
+          <th scope="col">Votes</th>
+         
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let candidate of candidates;let i = index" >
+          <th scope="row"> {{i+1}} </th>
+          <td>{{candidate.candidateName}}</td>
+          <td>
+          {{candidate.votes}}</td>
+         
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
