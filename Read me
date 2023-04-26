@@ -1,0 +1,6 @@
+- The task assigned by Jforce Solutions was completed on time on 25/04/2023. 
+  The only pending functionality was the logout feature, 
+  which has now been added to the project. Please take this into consideration.
+- To run a frontend application, please use the command "npm install" before running the project in the same directory.
+  This command installs all the necessary dependencies required for the application to run correctly. After running "npm install", you can then run the project using the appropriate command provided in the project's documentation.
+  Note that the "npm install" command should be run only once, or whenever there is an update or change to the dependencies of the project.
