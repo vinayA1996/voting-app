@@ -11,6 +11,8 @@ import { RegisterComponent } from './register/register.component';
 import { VotingDashboardComponent } from './voting-dashboard/voting-dashboard.component';
 import { RouterModule } from '@angular/router';
 import { AdminComponent } from './admin/admin.component';
+import { HeaderComponent } from './header/header.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { AdminComponent } from './admin/admin.component';
     RegisterComponent,
     VotingDashboardComponent,
     AdminComponent,
+    HeaderComponent,
+    DashboardComponent,
     
   ],
   imports: [

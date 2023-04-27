@@ -1,20 +1,6 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="">Voting app </a>  
-      </div>
-      <div class="d-flex" id="buttons">
-        <button type="button" class="btn btn-outline-dark mx-2" (click)="welcomepage=false"> 
-            <a routerLink="/login">Login</a> </button>
-        <button type="button" class="btn btn-outline-dark mx-3" (click)="welcomepage=false"><a routerLink="/register">Register</a></button>
-       
-      </div>
-  </nav>
 
-
-
-  <div *ngIf="welcomepage">
-    <h4 style="margin-left: 400px;margin-top: 20px;">
-      welcome to the voting portal please login or register to vote
-    </h4>
-  </div>
-  <router-outlet></router-outlet>
+<body>
+  <app-header></app-header>
+ 
+ 
+</body>

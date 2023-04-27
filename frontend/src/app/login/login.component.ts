@@ -25,6 +25,10 @@ loginStatus:boolean=false;
 }
   ngOnInit(): void {
    this.loginStatus=this.log.loginStatus;
+   if(this.loginStatus){
+    alert("already logged in")
+    this.router.navigateByUrl("/vote")
+   }
   }
 
 

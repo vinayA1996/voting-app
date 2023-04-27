@@ -6,13 +6,15 @@ import { VotingDashboardComponent } from './voting-dashboard/voting-dashboard.co
 import { AdminComponent } from './admin/admin.component';
 import { HomeComponent } from './home/home.component';
 import { AuthGuard } from './service/auth.guard';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
-  {path:'vote',canActivate:[AuthGuard] ,component:VotingDashboardComponent},
+  {path:'vote' ,component:VotingDashboardComponent},
   {path:'admin',component:AdminComponent},
   {path:'home',component:HomeComponent},
+  {path:'dashboard',component:DashboardComponent},
   {path:'*',component:HomeComponent}
 
 ];

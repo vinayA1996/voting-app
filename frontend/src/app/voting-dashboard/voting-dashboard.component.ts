@@ -60,9 +60,10 @@ export class VotingDashboardComponent implements OnInit {
        console.log(data);
       }})
       this.log.getVoterStatusChanger(localStorage.getItem('username')).subscribe();
-      this.router.navigateByUrl("/");
+      this.router.navigateByUrl("/home");
       alert(`vote successfully submitted to ${this.candidateName}`);
       localStorage.setItem("username", "")
+      this.log.loggedOut();
   }
 
 

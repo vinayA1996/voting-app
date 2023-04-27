@@ -1,22 +1,30 @@
-<div >
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Candidate Name</th>
-          <th scope="col">Votes</th>
-         
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let candidate of candidates;let i = index" >
-          <th scope="row"> {{i+1}} </th>
-          <td>{{candidate.candidateName}}</td>
-          <td>
-          {{candidate.votes}}</td>
-         
-        </tr>
-        
-      </tbody>
-    </table>
-  </div>
+<body>
+  <button type="button" class="btn btn-outline-dark" (click)="logout()" id="logout" ><a href="#">logout</a></button>
+<div  class="card" style="width: 25rem;text-align: center;">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Candidate Name</th>
+        <th scope="col">votes</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <tr *ngFor="let candidate of candidates;let i = index" >
+        <th scope="row"> {{i+1}} </th>  
+        <label for="html">{{candidate.candidateName}}</label><br>
+        <th>
+        <label for="html">{{candidate.votes}}</label><br></th>
+      </tr>
+      
+    </tbody>
+   
+   
+
+  </table>
+</div>
+
+  
+</body>
+

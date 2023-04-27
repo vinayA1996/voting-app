@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginService } from '../service/login.service';
@@ -9,9 +9,11 @@ import { LoginService } from '../service/login.service';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
-export class RegisterComponent {
+export class RegisterComponent implements OnInit {
   public form !: FormGroup;
   user:any;
+
+  loginStatus:boolean=false;
 
   constructor(private formBuilder: FormBuilder, private router: Router,
     private log: LoginService) {
@@ -21,6 +23,13 @@ export class RegisterComponent {
       password: ['', [Validators.required, Validators.minLength(6)]],
       phone: ['', [Validators.required]],
     });
+  }
+  ngOnInit(): void {
+    this.loginStatus=this.log.loginStatus;
+   if(this.loginStatus){
+    alert("already logged in")
+    this.router.navigateByUrl("/vote")
+   }
   }
 
   signUp(){
@@ -34,6 +43,7 @@ export class RegisterComponent {
       votingStatus:true
     }
     this.log.register(user).subscribe({
+      
       next: data => {
         this.user=data;
         console.log(this.user);
